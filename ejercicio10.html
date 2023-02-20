@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/favicon.ico">
+</head>
+<body>
+  <header class="container">
+    <img src="imagenes/logo.png" alt="logo">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="ejercicio1.html">ejercicio1</a>
+        <a href="ejercicio2.html">ejercicio2</a>
+        <a href="ejercicio3.html">ejercicio3</a>
+        <a href="ejercicio4.html">ejercicio4</a>
+        <a href="ejercicio5.html">ejercicio5</a>
+        <a href="ejercicio6.html">ejercicio6</a>
+        <a href="ejercicio7.html">ejercicio7</a>
+        <a href="ejercicio8.html">ejercicio8</a>
+        <a href="ejercicio9.html">ejercicio9</a>
+        <a href="ejercicio10.html">ejercicio10</a>
+    </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Se cuenta con la siguiente información: 
+         Las edades de 5 estudiantes del turno mañana. 
+         Las edades de 6 estudiantes del turno tarde. 
+         Las edades de 11 estudiantes del turno noche. 
+        Nota: Las edades de cada estudiante se deberán ingresar por la web. 
+        Lo que queremos devolver:
+         Obtener el promedio de las edades de cada turno (tres promedios).
+         Imprimir dichos promedios (promedio de cada turno).
+         Mostrar por pantalla un mensaje que indique cuál de los tres turnos tiene un 
+        promedio de edades mayo</p>
+    <h1>Turno de la mañana</h1>
+<div>
+  <label for="manana1">Estudiante 1:</label>
+  <input type="number" id="manana1" />
+</div>
+<div>
+  <label for="manana2">Estudiante 2:</label>
+  <input type="number" id="manana2" />
+</div>
+<div>
+  <label for="manana3">Estudiante 3:</label>
+  <input type="number" id="manana3" />
+</div>
+<div>
+  <label for="manana4">Estudiante 4:</label>
+  <input type="number" id="manana4" />
+</div>
+<div>
+  <label for="manana5">Estudiante 5:</label>
+  <input type="number" id="manana5" />
+</div>
+
+<h1>Turno de la tarde</h1>
+<div>
+  <label for="tarde1">Estudiante 1:</label>
+  <input type="number" id="tarde1" />
+</div>
+<div>
+  <label for="tarde2">Estudiante 2:</label>
+  <input type="number" id="tarde2" />
+</div>
+<div>
+  <label for="tarde3">Estudiante 3:</label>
+  <input type="number" id="tarde3" />
+</div>
+<div>
+  <label for="tarde4">Estudiante 4:</label>
+  <input type="number" id="tarde4" />
+</div>
+<div>
+  <label for="tarde5">Estudiante 5:</label>
+  <input type="number" id="tarde5" />
+</div>
+<div>
+  <label for="tarde6">Estudiante 6:</label>
+  <input type="number" id="tarde6" />
+</div>
+
+<h1>Turno de la noche</h1>
+<div>
+  <label for="noche1">Estudiante 1:</label>
+  <input type="number" id="noche1" />
+</div>
+<div>
+    <label for="noche2">Estudiante 2:</label>
+    <input type="number" id="noche2" />
+  </div>
+  <div>
+    <label for="noche3">Estudiante 3:</label>
+    <input type="number" id="noche3" />
+  </div>
+  <div>
+    <label for="noche4">Estudiante 4:</label>
+    <input type="number" id="noche4" />
+  </div>
+  <div>
+    <label for="noche5">Estudiante 5:</label>
+    <input type="number" id="noche5" />
+  </div>
+  <div>
+    <label for="noche6">Estudiante 6:</label>
+    <input type="number" id="noche6" />
+  </div>
+  <div>
+    <label for="noche7">Estudiante 7:</label>
+    <input type="number" id="noche7" />
+  </div>
+  <div>
+    <label for="noche8">Estudiante 8:</label>
+    <input type="number" id="noche8" />
+  </div>
+  <div>
+    <label for="noche9">Estudiante 9:</label>
+    <input type="number" id="noche9" />
+  </div>
+  <div>
+    <label for="noche10">Estudiante 10:</label>
+    <input type="number" id="noche10" />
+  </div>
+  <div>
+    <label for="noche11">Estudiante 11:</label>
+    <input type="number" id="noche11" />
+  </div>
+  
+
+<button onclick="calcularPromedios()">Calcular promedios</button>
+
+<div>
+  <h1>Promedio de edad turno mañana: <span id="promedioManana"></span></h1>
+  <h1>Promedio de edad turno tarde: <span id="promedioTarde"></span></h1>
+  <h1>Promedio de edad turno noche: <span id="promedioNoche"></span></h1>
+</div>
+
+</body>
+<script>
+    function calcularPromedios() {
+  // Obtener las edades de los estudiantes
+  const edadesManana = [
+    Number(document.getElementById('manana1').value),
+    Number(document.getElementById('manana2').value),
+    Number(document.getElementById('manana3').value),
+    Number(document.getElementById('manana4').value),
+    Number(document.getElementById('manana5').value)
+  ];
+  
+  const edadesTarde = [
+    Number(document.getElementById('tarde1').value),
+    Number(document.getElementById('tarde2').value),
+    Number(document.getElementById('tarde3').value),
+    Number(document.getElementById('tarde4').value),
+    Number(document.getElementById('tarde5').value),
+    Number(document.getElementById('tarde6').value)
+  ];
+  
+  const edadesNoche = [
+    Number(document.getElementById('noche1').value),
+    Number(document.getElementById('noche2').value),
+    Number(document.getElementById('noche3').value),
+    Number(document.getElementById('noche4').value),
+    Number(document.getElementById('noche5').value),
+    Number(document.getElementById('noche6').value),
+    Number(document.getElementById('noche7').value),
+    Number(document.getElementById('noche8').value),
+    Number(document.getElementById('noche9').value),
+    Number(document.getElementById('noche10').value),
+    Number(document.getElementById('noche11').value)
+  ];
+
+  // Calcular los promedios de edad
+  const promedioManana = calcularPromedio(edadesManana);
+  const promedioTarde = calcularPromedio(edadesTarde);
+  const promedioNoche = calcularPromedio(edadesNoche);
+
+  // Mostrar los promedios de edad en la página
+  document.getElementById('promedioManana').textContent = promedioManana;
+  document.getElementById('promedioTarde').textContent = promedioTarde;
+  document.getElementById('promedioNoche').textContent = promedioNoche;
+}
+
+function calcularPromedio(edades) {
+  // Calcular el promedio de edad
+  const sumaEdades = edades.reduce((suma, edad) => suma + edad, 0);
+  const promedio = sumaEdades / edades.length;
+  
+  // Redondear el promedio a dos decimales
+  return promedio.toFixed(2);
+}
+</script>
+</html>

@@ -1,0 +1,91 @@
+html{
+    height: 100%;
+}
+
+body{
+    background-image: url(imagenes/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'lato',sans-serif;
+    text-align: center;
+}
+
+img{
+    height: 200px;
+}
+
+.container{
+    height: 100px;
+    text-align: left;
+}
+
+nav{
+    background-color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+p{
+    background: linear-gradient(to right,skyblue, lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+label{
+    background: linear-gradient(to right,skyblue, lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+button{
+    background: linear-gradient(to right,skyblue, lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+
+
+ul{
+    font-size: 35px;
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+h1{
+    background: linear-gradient(to right,skyblue, lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 35px;
+    text-align: center;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+
+li{
+    background: linear-gradient(to right,skyblue, lightgreen);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/favicon.ico">
+</head>
+<body>
+  <header class="container">
+    <img src="imagenes/logo.png" alt="logo">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="ejercicio1.html">ejercicio1</a>
+        <a href="ejercicio2.html">ejercicio2</a>
+        <a href="ejercicio3.html">ejercicio3</a>
+        <a href="ejercicio4.html">ejercicio4</a>
+        <a href="ejercicio5.html">ejercicio5</a>
+        <a href="ejercicio6.html">ejercicio6</a>
+        <a href="ejercicio7.html">ejercicio7</a>
+        <a href="ejercicio8.html">ejercicio8</a>
+        <a href="ejercicio9.html">ejercicio9</a>
+        <a href="ejercicio10.html">ejercicio10</a>
+    </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  <p>Realizar una función para una tienda de coches en donde se deberá calcular: Si el coche a 
+    la venta es un FORD FIESTA, aplicar un 5% de descuento en la compra. Si el coche a la 
+    venta es un FORD FOCUS, el descuento será del 10% y si es un FORD ESCAPE el descuento 
+    será del 20%. Mostrar en html el coche seleccionado y el descuento que se aplicara en base 
+    a lo que selecciono el usuario</p>
+    <h1>Descuentos para coches</h1>
+    <label for="coche">Seleccione el coche:</label>
+    <select id="coche">
+      <option value="fiesta">FORD FIESTA</option>
+      <option value="focus">FORD FOCUS</option>
+      <option value="escape">FORD ESCAPE</option>
+    </select>
+    <br>
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio">
+    <br>
+    <button onclick="calcularDescuento()">Calcular descuento</button>
+    <br>
+    <p id="resultado"></p>
+
+    
+</body>
+<script>
+    function calcularDescuento() {
+      var coche = document.getElementById("coche").value;
+      var precio = parseFloat(document.getElementById("precio").value);
+      var descuento = 0;
+      var mensaje = "Coche seleccionado: " + coche.toUpperCase();
+
+      switch (coche) {
+        case "fiesta":
+          descuento = 0.05;
+          mensaje += "<br>Descuento: 5%";
+          break;
+        case "focus":
+          descuento = 0.1;
+          mensaje += "<br>Descuento: 10%";
+          break;
+        case "escape":
+          descuento = 0.2;
+          mensaje += "<br>Descuento: 20%";
+          break;
+        default:
+          mensaje = "Por favor, seleccione un coche.";
+      }
+
+      if (descuento > 0) {
+        var precioFinal = precio - (precio * descuento);
+        mensaje += "<br>Precio final: $" + precioFinal.toFixed(2);
+      }
+
+      document.getElementById("resultado").innerHTML = mensaje;
+    }
+  </script>
+</html>

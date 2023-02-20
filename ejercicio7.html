@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/favicon.ico">
+</head>
+<body>
+  <header class="container">
+    <img src="imagenes/logo.png" alt="logo">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="ejercicio1.html">ejercicio1</a>
+        <a href="ejercicio2.html">ejercicio2</a>
+        <a href="ejercicio3.html">ejercicio3</a>
+        <a href="ejercicio4.html">ejercicio4</a>
+        <a href="ejercicio5.html">ejercicio5</a>
+        <a href="ejercicio6.html">ejercicio6</a>
+        <a href="ejercicio7.html">ejercicio7</a>
+        <a href="ejercicio8.html">ejercicio8</a>
+        <a href="ejercicio9.html">ejercicio9</a>
+        <a href="ejercicio10.html">ejercicio10</a>
+    </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Realizar programa para una web, en el cual el usuario introduce 2 notas y su valor 
+        ponderado (como cuando un examen vale un 30% y otro examen el 70%). Pulsando el 
+        botón “Calcula”, la web muestra como resultado la nota media ponderada.</p>
+    <h1>Calculadora de Nota Media Ponderada</h1>
+    <p>Introduce las notas y su valor ponderado:</p>
+    <p>Nota 1: <input type="text" id="nota1"></p>
+    <p>Ponderado 1: <input type="text" id="ponderado1"></p>
+    <p>Nota 2: <input type="text" id="nota2"></p>
+    <p>Ponderado 2: <input type="text" id="ponderado2"></p>
+    <button onclick="calcularMedia()">Calcula</button>
+    <p id="resultado"></p>
+</body>
+<script>
+    function calcularMedia() {
+      var nota1 = parseFloat(document.getElementById('nota1').value);
+      var nota2 = parseFloat(document.getElementById('nota2').value);
+      var ponderado1 = parseFloat(document.getElementById('ponderado1').value);
+      var ponderado2 = parseFloat(document.getElementById('ponderado2').value);
+      
+      var media = (nota1 * ponderado1 + nota2 * ponderado2) / (ponderado1 + ponderado2);
+      
+      document.getElementById('resultado').innerHTML = 'La nota media ponderada es: ' + media.toFixed(2);
+    }
+  </script>
+</html>

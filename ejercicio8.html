@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/favicon.ico">
+</head>
+<body>
+  <header class="container">
+    <img src="imagenes/logo.png" alt="logo">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="ejercicio1.html">ejercicio1</a>
+        <a href="ejercicio2.html">ejercicio2</a>
+        <a href="ejercicio3.html">ejercicio3</a>
+        <a href="ejercicio4.html">ejercicio4</a>
+        <a href="ejercicio5.html">ejercicio5</a>
+        <a href="ejercicio6.html">ejercicio6</a>
+        <a href="ejercicio7.html">ejercicio7</a>
+        <a href="ejercicio8.html">ejercicio8</a>
+        <a href="ejercicio9.html">ejercicio9</a>
+        <a href="ejercicio10.html">ejercicio10</a>
+    </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Crear programa donde se introduce una temperatura en Celsius y salga el resultado en 
+        Fahrenheit, una vez teniendo la temperatura en Fahrenheit deberá devolver lo siguiente:
+         Si ºF está entre 14 y 32, sale la frase “Temperatura baja”
+         Si ºF está entre 32 y 68, sale la frase “Temperatura adecuada”
+         Si ºF está entre 68 y 96, sale la frase “Temperatura alta”
+         Si no está entre ningún caso anterior la frase “Temperatura desconocida”</p>
+    <h1>Conversor de Temperatura</h1>
+    <p>Introduce la temperatura en Celsius:</p>
+    <input type="text" id="celsius">
+    <button onclick="convertirTemperatura()">Convertir</button>
+    <p>La temperatura en Fahrenheit es: <span id="fahrenheit"></span></p>
+    <p id="mensaje"></p>
+</body>
+<script>
+    function convertirTemperatura() {
+      var celsius = parseFloat(document.getElementById('celsius').value);
+      var fahrenheit = (celsius * 1.8) + 32;
+      
+      document.getElementById('fahrenheit').innerHTML = fahrenheit.toFixed(2);
+      
+      if (fahrenheit >= 14 && fahrenheit < 32) {
+        document.getElementById('mensaje').innerHTML = 'Temperatura baja';
+      } else if (fahrenheit >= 32 && fahrenheit < 68) {
+        document.getElementById('mensaje').innerHTML = 'Temperatura adecuada';
+      } else if (fahrenheit >= 68 && fahrenheit < 96) {
+        document.getElementById('mensaje').innerHTML = 'Temperatura alta';
+      } else {
+        document.getElementById('mensaje').innerHTML = 'Temperatura desconocida';
+      }
+    }
+  </script>
+</html>

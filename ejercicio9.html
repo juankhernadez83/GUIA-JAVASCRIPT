@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/favicon.ico">
+</head>
+<body>
+  <header class="container">
+    <img src="imagenes/logo.png" alt="logo">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="ejercicio1.html">ejercicio1</a>
+        <a href="ejercicio2.html">ejercicio2</a>
+        <a href="ejercicio3.html">ejercicio3</a>
+        <a href="ejercicio4.html">ejercicio4</a>
+        <a href="ejercicio5.html">ejercicio5</a>
+        <a href="ejercicio6.html">ejercicio6</a>
+        <a href="ejercicio7.html">ejercicio7</a>
+        <a href="ejercicio8.html">ejercicio8</a>
+        <a href="ejercicio9.html">ejercicio9</a>
+        <a href="ejercicio10.html">ejercicio10</a>
+    </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>Se realiza la carga de 10 valores enteros por teclado. Se desea conocer: 
+         La cantidad de valores negativos ingresados.
+         La cantidad de valores positivos ingresados.
+         La cantidad de múltiplos de 15.
+         El valor acumulado de los números ingresados que son pares</p>
+    <h1>Estadísticas de valores enteros</h1>
+    <button onclick="calcularEstadisticas()">Calcular estadísticas</button>
+    <p>Cantidad de valores negativos ingresados: <span id="negativos"></span></p>
+    <p>Cantidad de valores positivos ingresados: <span id="positivos"></span></p>
+    <p>Cantidad de múltiplos de 15: <span id="multiplos15"></span></p>
+    <p>Valor acumulado de los números ingresados que son pares: <span id="sumaPares"></span></p>
+</body>
+<script>
+    function calcularEstadisticas() {
+      var numeros = [];
+      var negativos = 0;
+      var positivos = 0;
+      var multiplos15 = 0;
+      var sumaPares = 0;
+      
+      for (var i = 1; i <= 10; i++) {
+        var numero = parseInt(prompt('Introduce el valor número ' + i + ':'));
+        numeros.push(numero);
+        
+        if (numero < 0) {
+          negativos++;
+        } else if (numero > 0) {
+          positivos++;
+        }
+        
+        if (numero % 15 == 0) {
+          multiplos15++;
+        }
+        
+        if (numero % 2 == 0) {
+          sumaPares += numero;
+        }
+      }
+      
+      document.getElementById('negativos').innerHTML = negativos;
+      document.getElementById('positivos').innerHTML = positivos;
+      document.getElementById('multiplos15').innerHTML = multiplos15;
+      document.getElementById('sumaPares').innerHTML = sumaPares;
+    }
+  </script>
+</html>

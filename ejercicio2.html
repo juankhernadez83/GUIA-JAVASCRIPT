@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagenes/favicon.ico">
+</head>
+<body>
+    <header class="container">
+        <img src="imagenes/logo.png" alt="logo">
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="ejercicio1.html">ejercicio1</a>
+            <a href="ejercicio2.html">ejercicio2</a>
+            <a href="ejercicio3.html">ejercicio3</a>
+            <a href="ejercicio4.html">ejercicio4</a>
+            <a href="ejercicio5.html">ejercicio5</a>
+            <a href="ejercicio6.html">ejercicio6</a>
+            <a href="ejercicio7.html">ejercicio7</a>
+            <a href="ejercicio8.html">ejercicio8</a>
+            <a href="ejercicio9.html">ejercicio9</a>
+            <a href="ejercicio10.html">ejercicio10</a>
+        </nav>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    <p>Crear una función que determine la nota final de un alumno, la cual depende de lo siguiente:
+        <br> 
+         Examen =20%
+         tareas = 40%
+         asistencia = 10%
+         investigación = 30%
+        <br>
+        Al final deberá mostrar los datos del alumno, nombre, carnet y nota final</p>
+    <label for="nombre">Nombre del alumno:</label> <br>
+<input type="text" id="nombre"> <br>
+<label for="carnet">Carnet del alumno:</label><br>
+<input type="text" id="carnet"><br>
+<label for="examen">Nota del examen:</label><br>
+<input type="number" id="examen"><br>
+<label for="tareas">Nota de tareas:</label><br>
+<input type="number" id="tareas"><br>
+<label for="asistencia">Porcentaje de asistencia:</label><br>
+<input type="number" id="asistencia"><br>
+<label for="investigacion">Nota de investigación:</label><br>
+<input type="number" id="investigacion"><br>
+<button onclick="calcularNota()">Calcular nota</button><br>
+<p id="datos"></p>
+</body>
+<script>
+    function calcularNota() {
+  var nombre = document.getElementById("nombre").value;
+  var carnet = document.getElementById("carnet").value;
+  var examen = document.getElementById("examen").value;
+  var tareas = document.getElementById("tareas").value;
+  var asistencia = document.getElementById("asistencia").value;
+  var investigacion = document.getElementById("investigacion").value;
+
+  var notaExamen = examen * 0.2;
+  var notaTareas = tareas * 0.4;
+  var notaAsistencia = asistencia * 0.1;
+  var notaInvestigacion = investigacion * 0.3;
+
+  var notaFinal = notaExamen + notaTareas + notaAsistencia + notaInvestigacion;
+
+  var mensaje = "Nombre: " + nombre + "<br>" + "Carnet: " + carnet + "<br>" + "Nota final: " + notaFinal;
+
+  document.getElementById("datos").innerHTML = mensaje;
+}
+</script>
+</html>
